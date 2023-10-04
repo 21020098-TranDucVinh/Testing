@@ -12,4 +12,10 @@ public class MainTest {
     public void test1(String s1, int s2, String expected) {
         assertEquals(expected, Main.decide(s1, s2));
     }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/testcase.csv")
+    public void Grade2(String s1, int s2, String expected) {
+        assertEquals(expected, Main.decide(s1, s2));
+    }
 }
